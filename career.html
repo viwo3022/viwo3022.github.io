@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html  class="animated fadeIn">
+  <head>
+
+    <script>
+        var slideIndex = 0;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+
+          var x = document.getElementById("careerTitle");
+            x.style.display = "none";
+          
+          var y = document.getElementById("suitcase");
+          y.style.display = "none";
+          
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+          var x = document.getElementById("careerTitle");
+           x.style.display = "none";
+
+           var y = document.getElementById("suitcase");
+          y.style.display = "none";
+          
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+
+
+}
+    </script>
+
+
+<title>Vienna Wong | Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" href="https://img.icons8.com/doodle/480/000000/sunny-side-up-eggs.png"/>>
+
+<!-- <link rel="stylesheet" href="_css/animate.css"> -->
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<link href="custom.css" rel="stylesheet">
+<!-- <link rel = "stylesheet" href="css/master.css"> -->
+
+
+
+</head>
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <!-- <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;"> -->
+    <div class="topnav">
+
+    <a href="start.html" class="w3-bar-item w3-button">vienna wong</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+
+      <a href="index.html" class="w3-bar-item w3-button">home.</a>
+      <a href="career.html" class="w3-bar-item w3-button">career.</a>
+      <a href="projects.html" class="w3-bar-item w3-button">projects.</a>
+      <a href="about.html" class="w3-bar-item w3-button">about.</a>
+      <a href="index.html#contact" class="w3-bar-item w3-button">contact.</a>
+      
+    </div>
+  </div>
+</div>
+
+<div >
+
+  
+  <div class="half">
+    <!-- <h1 class="typewriter" style="text-align: center; margin-top: 1em; color:white">my career</h1> -->
+    <div class="typewriter" style="text-align: center; margin-top: 1em; color:white; " id="careerTitle">
+      <h1 style="color: #EDF2F2; font-size: 50px; letter-spacing: 20px;">my career</h1>
+   </div>
+      
+      <!-- Slideshow container -->
+      <div class="slideshow-container" id="suitcase">
+        <img style ="width:150px; height:150px;" class= "center"  src="img/programing.png">
+      </div>
+        <!-- Full-width slides/quotes -->
+        <div class="mySlides" id = "slide1">
+          <div class="animate__animated animate__zoomIn">
+            <h6 class = "center" style="max-width: 70%; min-width: 30%; margin-top: 10%; font-size: 15px; letter-spacing: 5px;"> My professional goal is to apply my computer science education towards developing new tools and improving upon existing tools to help people in their everyday lives.</h6>
+         </div>
+          <!-- <p class="author">- John Keats</p> -->
+        </div>
+
+        <div class="mySlides" id="slide2">
+          <div class="animate__animated animate__zoomIn">
+            <h6 class = "center" style="max-width: 70%; min-width: 30%; margin-top: 10%; font-size: 15px; letter-spacing: 5px;"> If I were to tell you one thing about my personal and professional life, I'd tell you I love interacting with people. From being a STEM teacher to a resident advisor, my favorite roles have been ones that allowed me to guide others and learn from others</h6>
+         </div>
+        </div>
+
+        <div class="mySlides" id="slide3">
+          <div class="animate__animated animate__zoomIn">
+            <h6 class = "center" style="max-width: 70%; min-width: 30%; margin-top: 10%; font-size: 12px; letter-spacing: 5px;"> As a University student, I am still exploring what computer science field I am truly passionate it. Currently, I am looking to find opportunities that will allow me to learn something new! I came into computer science hopeful to learn software development and with that, I also found an incedibly versatile field that spans much more than software development. </h6>
+         </div>
+        </div>
+
+        <div class="mySlides" id='slide4'>
+          <div class="animate__animated animate__zoomIn">
+            <h6 class = "center" style="max-width: 70%; min-width: 30%; margin-top: 10%; font-size: 12px; letter-spacing: 5px;"> <button class="btn success" onclick="window.open('resume.pdf')">My Resume</button> <button class="btn success" onclick=" window.open('https://www.github.com/viwo3022')" >My GitHub</h6>
+         </div>
+        </div>
+
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <!-- </div> -->
+
+      <!-- Dots/bullets/indicators -->
+      <!-- <div class="dot-container" style="margin-top: -3em;text-align: center;"> -->
+
+        <div style="text-align: center; margin-top: 5em ; align-self:baseline; vertical-align: bottom; position: absolute; left: 47%; bottom: 35%;">
+          <div class="dot" onclick="currentSlide(1)"></div>
+          <div class="dot" onclick="currentSlide(2)"></div>
+          <div class="dot" onclick="currentSlide(3)"></div>
+          <div class="dot" onclick="currentSlide(4)"></div>
+        </div>
+   
+      </div>
+
+    
+    </div>
+   
+      
+  </div>
+  <div class="otherhalf" >
+
+    <div class="center"> 
+      
+      <table class="tg" style="table-layout: fixed; width: 100%; margin: auto; margin-top: 20px;" >
+      <colgroup>
+      <col style="width: auto">
+      <col style="width: auto">
+      <col style="width: auto">
+      <col style="width: auto">
+      </colgroup>
+      <thead>
+        <tr>
+          <th class="tg-zgsm"> <a onclick="currentSlide(1)"><img src="img/computer.png" alt="goal" style="width: 60px;"></a></th>
+          <th class="tg-zgsm"> <a onclick="currentSlide(2)"><img src="img/player.png" alt="goal" style="width: 60px;"></a></th>
+          <th class="tg-zgsm"> <a onclick="currentSlide(3)"><img src="img/keyboard.png" alt="goal" style="width: 60px;"></a></th>
+          <th class="tg-zgsm"> <a onclick="currentSlide(4)"><img src="img/checklist.png" alt="goal" style="width: 60px;"></a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-zgsm"> my professional goal</td>
+          <td class="tg-zgsm">me in the workplace</td>
+          <td class="tg-zgsm">what i'm looking for</td>
+          <td class="tg-zgsm">resume & more</td>
+        </tr>
+      </tbody>
+      </table>
+    
+    </div>
+    
+
+    <!-- <h6>
+
+   
+    <br></br>
+    
+    <br></br>
+    
+    <br></br>
+    
+    
+    </h6> -->
+   
+  </div>
+  <!-- <div class="row" style="max-width: 100%; text-align: center;">
+    <div class ="column" style="background-color: #B7D3DE; width: 33%; height: 300px;">iuathiavhuehvtliehtiwehliae</div>
+    <div class ="column" style="background-color: #EDF2F2; width: 33%; height: 300px;">iuathiavhuehvtliehtiwehliae</div>
+    <div class ="column" style="background-color: #EBB75B; width: 34%; height: 300px;">iuathiavhuehvtliehtiwehliae</div>
+  </div> -->
+  
+<!-- End page content -->
+</div>
+
+
+<footer>
+
+  <div class="row">
+    <div class="column" >
+      
+      <a href = "#contact"  style="text-decoration:none"> <h3>contact me</h3></a>
+      <p class ="small">viennawong@gmail.com</p>
+      <p class = "small">+1 (720) - 454 - 8462</p>
+      <!-- <p class = "small">Denver, Colorado</p> -->
+    </div>
+    <div class="column" >
+     
+      <h3>my socials</h3>
+      <a href="https://www.instagram.com/vienna.wong/?hl=en">
+        <div class="zoom">
+          <img src="https://img.icons8.com/ios/50/000000/instagram-new--v2.png" alt="insta" style="width:35px;height:305x;margin-right: 7px;margin-left: 7px;">
+        </div>
+      </a>
+
+
+      <a href="https://www.instagram.com/vienna.wong/?hl=en">
+      <a href="https://www.facebook.com/viennasauage/"> 
+        <div class = "zoom">
+          <img src="https://img.icons8.com/ios/50/000000/facebook-circled--v5.png" alt="facebook" style="width:35px;height:35px;margin-right:7px;margin-left: 7px;">
+        </div>
+      </a>
+
+
+      <a href="https://www.linkedin.com/in/viennawongw">
+        <div class = "zoom">
+          <img src="https://img.icons8.com/ios/50/000000/linkedin-circled--v5.png" style="width:35px;height:35px;margin-right:7px;margin-left: 7px;"/>
+        </div>
+     </a>
+
+
+      <a href="mailto:viennawongw@gmail.com">
+        <div class = "zoom">
+          <img src="https://img.icons8.com/ios/50/000000/gmail--v2.png" style="width:35x;height:35px;margin-right:7px ;margin-left: 7px;"/>
+        </div>
+      </a>
+
+      <p>copyright &copy; <script>document.write(new Date().getFullYear())</script> Vienna Wong</p>
+
+      
+    </div>
+    <div class="column" >
+      
+      <h3>credit</h3>
+      <p class = "small"> w3schools.com </p>
+      <p class = "small"> icons from icons8</p>
+      <p class= "small"> icons from Eucalyp </p>
+    </div>
+  </div>
+  
+</footer>
+
+
+
+</body>
+</html>
