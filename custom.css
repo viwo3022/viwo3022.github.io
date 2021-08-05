@@ -1,3 +1,34 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+@-ms-viewport {
+  width: device-width ;
+}
+
+/* code that is here, until the first @media block, will apply to any screen size */
+#somethingorother {
+  width: 800px ;
+}
+
+@media screen and (max-width: 320px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  #somethingorother {
+    width: 120px ;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+  #somethingorother {
+    width: 320px ;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #somethingorother {
+    width: 480px ;
+  }
+}
 
 p{
   font-family: novecento-sans-condensed, sans-serif;
@@ -11,6 +42,8 @@ body {
     font-family: "Times New Roman", Georgia, Serif;
     font-size: 15px;
     color: #393D40;
+    /* display: flex;
+    flex-direction: column; */
   }
 
   /* enter small devices and phone style overrides here */
@@ -109,6 +142,8 @@ body {
     /* position: relative;; */
     /* bottom: 0; */
     width: 100%;
+    /* margin-top: auto */
+
   }
   .column {
     float: left;
